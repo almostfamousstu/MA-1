@@ -33,7 +33,7 @@ The task is to **develop and validate a Python script** that:
 
 ### Flow
 
-1. Extract: Leverage the *DK utility belt* to pull data directly from Data instead of manually updating six separate Excel reports.
+1. Extract: Leverage the *DK utility belt* to pull data directly from Databricks instead of manually updating six separate Excel reports.
 2. Transform: Apply data validation and formatting rules automatically to ensure accuracy and consistency across all reports.
 3. Load & Consolidate: Merge data from multiple sources into a single standardized Excel template without manual copy/paste steps.
 
