@@ -1,20 +1,9 @@
-# **Decision-Key-Flat-File-MiAu**
+# **Gen Merch CREST Flash Report**
 
 ## 📄 Overview
 
-**UK Toy Market Custom Unify Report Automation**
-The objective of this solution is to reliably automate this process.
-
-
-**POC DISCLAIMER**
-This repository serves as the **proof of concept (POC)** for the MARU Developer Portal.
-The goal of this POC is to demonstrate a streamlined onboarding and execution workflow for third-party developers within a standardized GitHub environment.
-
-This repository allows developers to:
-
-* Quickly spin up a ready-to-use **Codespace** environment with all dependencies preinstalled.
-* Review structured documentation outlining **requirements**, **constraints**, and **solution design**.
-* Implement, test, and deliver a working automation with minimal setup friction.
+**CREST Flash Report**
+Automate the manual process to pull and transform data to produce the Monthly CREST Flash Report.
 
 ---
 
@@ -22,10 +11,10 @@ This repository allows developers to:
 
 The task is to **develop and validate a Python script** that:
 
-1. Calls the UNIFY+ reporting service via provided API.
-2. Retrieves the required dataset.
-3. Generates a properly formatted flat file.
-4. Delivers the file to the designated internal location (secure mFTP endpoint).
+1. Update Decision Key data in six Excel reports
+2. Review Excel reports for data/format accuracy
+3. Copy/Paste data from the six reports into one Excel template
+4. Copy/Paste template into email and internal system to distribute monthly
 
 
 ---
@@ -44,18 +33,16 @@ The task is to **develop and validate a Python script** that:
 
 ### Flow
 
-1. Developer launches a Codespace → container builds automatically using the provided `Dockerfile` and `devcontainer.json`.
-2. The Python environment installs all dependencies from `requirements.txt`.
-3. Developer configures `config.yaml` with valid credentials and parameters.
-4. The `dkFlatFileExtract.py` script is executed via `python3 dkFlatFileExtract.py <ARGS>`.
-5. Output file is validated and delivered to the target location.
+1. Extract: Leverage the *DK utility belt** to pull data directly from Data instead of manually updating six separate Excel reports.
+2. Transform: Apply data validation and formatting rules automatically to ensure accuracy and consistency across all reports.
+3. Load & Consolidate: Merge data from multiple sources into a single standardized Excel template without manual copy/paste steps.
 
 ---
 
 ## 🧰 Reference Documentation
 
-* [Internal Reporting Service API Docs](./docs/reporting_service_api.md)
-* [Developer Portal Guidelines](./docs/developer_portal_standards.md)
+* [LD Service API Docs](https://iriworldwide-my.sharepoint.com/:w:/r/personal/haresh_sheladiya_circana_com/Documents/Docs/LD%20Services%20Login%20API.docx?d=w88823dd1feb049179d823ff2f0a62d21&csf=1&web=1&e=mua3QQ)
+* [GenMerch Resource Center](https://iriworldwide.sharepoint.com/sites/product)
 * [Coding Standards & Review Process](./docs/code_review_standards.md)
 
 ---
@@ -87,15 +74,13 @@ Test coverage includes:
 
 ## 🚀 Deployment / Delivery
 
-Once validated, the automation will be scheduled or integrated into internal orchestration tools (e.g., Airflow, Control-M, or internal schedulers).
-For the POC, execution will be manual via the CLI.
+Once validated, the notebook will be added to a pipeline in Databricks and will be triggerd monthly. 
+
+* [Decision Key Databricks Pipeline](https://adb-7295981015989544.4.azuredatabricks.net/jobs?o=7295981015989544)
 
 ---
 
 ## 🔒 Security & Access
 
-* **Authentication:** Service credentials are stored as GitHub Secrets or in a local `.env` file (excluded via `.gitignore`).
-* **Data Handling:** Generated flat files contain internal data; and cannot be uploaded to public repositories.
-* **Access Control:** Only approved developers will have access to this repo (via MARU Developer Portal).
 
 ---
