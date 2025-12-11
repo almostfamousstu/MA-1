@@ -41,7 +41,7 @@ The task is to **develop and validate a Python script** that:
 
 ## 🧰 Reference Documentation
 
-* [LD Service API Docs](https://iriworldwide-my.sharepoint.com/:w:/r/personal/haresh_sheladiya_circana_com/Documents/Docs/LD%20Services%20Login%20API.docx?d=w88823dd1feb049179d823ff2f0a62d21&csf=1&web=1&e=mua3QQ)
+* [ Cloud Analytics - Enablement Layer](https://iriworldwide-my.sharepoint.com/:p:/g/personal/olufemi_akinbode_circana_com/IQCnQBptMAfPH_W6lERel-GGAYQGeoX2M0kUnoSlcT-ysFs?e=hF4e90)
 * [GenMerch Resource Center](https://iriworldwide.sharepoint.com/sites/product)
 * [Coding Standards & Review Process](./docs/code_review_standards.md)
 
